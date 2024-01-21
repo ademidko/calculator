@@ -1,9 +1,17 @@
-let money = 100; 
-let income = 123; 
-const addExpenses = true; 
-const deposit = 12; 
-const mission = 'rest';
-let period = new Date(2024, 0, 22);
+let money = 100000; 
+let income = 'фриланс'; 
+let addExpenses = 'Интернет, такси, коммуналка'; 
+const deposit = true; 
+const mission = 15000;
+const period = 5
 
-alert('Hello1');
-console.log(period);
+console.log(typeof money);
+console.log(typeof income);
+console.log(typeof deposit);
+console.log(addExpenses.length);
+console.log('Период равен ${period} месяцев и цель заработать ${mission} рублей/долларов/гривен/юани');
+console.log(addExpenses.split(addExpenses.toLocaleLowerCase()));
+
+let budgetDay = money / 30;
+console.log(budgetDay);
+
