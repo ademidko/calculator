@@ -1,20 +1,24 @@
-let money = 100000; 
-let income = 'фриланс'; 
-let addExpenses = 'Интернет, такси, коммуналка'; 
-const deposit = true; 
-const mission = 15000;
-const period = 5
-
-console.log(typeof money);
-console.log(typeof income);
-console.log(typeof deposit);
-console.log(addExpenses.length);
-console.log(`Период равен ${period} месяцев и цель заработать ${mission} рублей/долларов/гривен/юани`);
-addExpenses.toLocaleLowerCase()
-console.log(addExpenses.split(', '));
-
-let budgetDay = money / 30;
-console.log(budgetDay);
 
 // доп задание 
+
+// 1
+const num = 266219;
+
+// 2 
+let arrNum = num.toString().split('');
+let product = 1; 
+
+for (let i = 0; i < arrNum.length; i++) {
+    product *= parsnt(arrNum[i]);
+}
+console.log(product);
+
+// 3 
+let productDegree = product**3;
+console.log(productDegree);
+
+// 4 
+console.log(productDegree.toString().slice(0,2));
+
+
 
