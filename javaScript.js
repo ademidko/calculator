@@ -36,22 +36,28 @@ function getAccumulatedMonth (income, expenses) {
 
 const accumulatedMonth = accumulatedMonth(money, amount);
 
+function getTargetMonth(mission, accumulatedMonth) {
+    return Math.ceil(mission / accumulatedMonth)
+}
 
-
-const months = Math.ceil(mission / accumulatedMonth);
+const months = getTargetMonth(mission, accumulatedMonth);
 console.log(months);
 
 const budgetDay = Math.floor(budgetMonth / 30);
 
 console.log(budgetDay);
 
-if (budgetDay >= 1200) {
-    console.log('У вас высокий доход');
-} else if (budgetDay >= 600 || budgetDay < 1200) {
-    console.log('У вас средний уровень дохода');
-} else if (budgetDay < 600 || budgetDay >= 0) {
-    console.log('К сожалению у вас уровень дохода ниже среднего');
-} else {
-    console.log('Что то пошло не так');
+const getStatusIncome = function (budgetDay) {
+    if (budgetDay >= 1200) {
+       return 'У вас высокий доход';
+    } else if (budgetDay >= 600 || budgetDay < 1200) {
+        return'У вас средний уровень дохода';
+    } else if (budgetDay < 600 || budgetDay >= 0) {
+        return 'К сожалению у вас уровень дохода ниже среднего';
+    } else {
+        return 'Что то пошло не так';
+    }
+     
 }
 
+console.log(getStatusIncome(budgetDay));
