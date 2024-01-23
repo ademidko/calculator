@@ -44,3 +44,39 @@ const func = function (string) {
 }
 
 console.log(func(str));
+
+let arr = [];
+
+for (let i = 0; i < 7; i++) {
+  let randomNumber = Math.floor(Math.random() * 20) + 1;
+  arr.push('' + randomNumber);
+}
+console.log(arr);
+
+for (let i = 0; i < arr.length; i++) {
+  let firstDigit = arr[i][0];
+  if (firstDigit === '2' || firstDigit === '4') {
+    console.log(arr[i]);
+  }
+}
+
+function isPrime(number) {
+  if (number < 2) {
+    return false;
+  }
+  
+  for (let divisor = 2; divisor <= Math.sqrt(number); divisor++) {
+    if (number % divisor === 0) {
+      return false;
+    }
+  }
+  
+  return true;
+}
+
+for (let number = 2; number <= 100; number++) {
+  if (isPrime(number)) {
+    console.log(number + " (Делители этого числа: 1 и " + number + ")");
+  }
+}
+
