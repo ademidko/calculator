@@ -132,3 +132,22 @@ for (const key in appDate) {
 console.log(typeof appDate.addExpenses);
 const addExpenses = appDate.addExpenses.map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(', ');
 console.log(addExpenses);
+
+const calculateButton = document.getElementById("start");
+const plusButtons = document.querySelectorAll("button.btn_plus");
+const checkbox = document.querySelector("#deposit-check");
+const additionalIncomeInputs = document.querySelectorAll(".additional_income-item");
+const rightPanelElements = document.querySelectorAll(".-value");
+const salaryInput = document.querySelector(".salary-amount");
+const incomeTitleInput = document.querySelector(".income-title");
+const incomeAmountInput = document.querySelector(".income-amount");
+const expensesTitleInput = document.querySelector(".expenses-title");
+const expensesAmountInput = document.querySelector(".expenses-amount");
+const additionalExpensesInput = document.querySelector(".additional_expenses-item");
+const depositBankSelect = document.querySelector(".deposit-bank");
+const depositAmountInput = document.querySelector(".deposit-amount");
+const depositPercentInput = document.querySelector(".deposit-percent");
+const targetAmountInput = document.querySelector(".target-amount");
+const periodSelectInput = document.querySelector(".period-select");
+
+
